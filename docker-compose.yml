@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  quant-app:
+    build: .
+    image: quant-trading-app:latest
+    container_name: quant-trading-container
+    volumes:
+      - ./data:/app/data # Mount data directory to persist downloaded stock data
+    ports:
+      - "8501:8501"
+    # Remove command if you want to use the default CMD from Dockerfile,
+    # or override it here if needed.
+    # command: python main.py

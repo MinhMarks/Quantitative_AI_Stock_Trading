@@ -17,5 +17,10 @@ data/*.csv
 .vscode/
 .idea/
 
+# OS specific
+Thumbs.db
+Desktop.ini
+
 # Artifacts
-strategy_comparison.png
+# Uncomment the line below if you DO NOT want to commit the result plot
+# strategy_comparison.png

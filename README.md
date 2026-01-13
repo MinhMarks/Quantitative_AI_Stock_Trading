@@ -1,35 +1,34 @@
 # Quantitative Trading Strategy Backtesting
 
-A Python-based backtesting framework for quantitative trading strategies, featuring data collection, feature engineering (SMA, RSI, MACD), and both rule-based and ML-based strategy evaluation.
+A comprehensive Python framework for designing, backtesting, and evaluating quantitative trading strategies. This project demonstrates skills in Data Science, Machine Learning, and Financial Engineering.
 
-## Features
-- **Data Loader**: Auto-fetch OHLCV data from Yahoo Finance.
-- **Technical Indicators**: SMA, RSI, MACD, Bollinger Bands/Volatility.
-- **Strategies**:
-  - `MACrossoverStrategy`: Classic trend-following.
-  - `MLStrategy`: Random Forest classifier for direction prediction.
-- **Backtester**: Simulates trading with transaction costs and slippage.
-- **Evaluation**: Sharpe Ratio, Maximum Drawdown, Equity Curve visualization.
+## 📂 Documentation
+Full documentation is available in the `docs/` folder:
 
-## Installation
-1. Clone the repository:
-   ```bash
-   git clone <your-repo-url>
-   cd quant_project
-   ```
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+-   **[Setup Guide](docs/setup_guide.md)**: Instructions for installing and running the project.
+-   **[Architecture & Logic](docs/architecture_and_logic.md)**: Detailed explanation of the strategies and math behind the indicators.
+-   **[GitHub Push Guide](docs/github_guide.md)**: Step-by-step guide to uploading this project to GitHub.
+-   **[Docker Guide](docs/docker_guide.md)**: Instructions for building and running with Docker.
+-   **[Deployment Guide](docs/deploy_guide.md)**: How to host the Web App on Streamlit Cloud.
+-   **[Reference Paper](docs/references/Quantitative_Trading_Strategy_Backtesting_and_Perf.pdf)**: Theoretical background and references.
 
-## Usage
-Run the main demo script:
-```bash
-python main.py
-```
-This will fetch data for SPY, train the models, run backtests, and generate a performance plot `strategy_comparison.png`.
+## 🚀 Quick Start
+1.  **Install dependencies**:
+    ```bash
+    pip install -r requirements.txt
+    ```
+2.  **Run the demo**:
+    ```bash
+    python main.py
+    ```
 
-## Project Structure
-- `data/`: Stored historical data (CSV).
-- `src/`: Source code modules.
-- `main.py`: Entry point.
+## 📊 Features
+-   **Automated Data Pipeline**: Fetches and cleans OHLCV data via `yfinance`.
+-   **Multi-Strategy Support**:
+    -   *Rule-Based*: Moving Average Crossover.
+    -   *ML-Based*: Random Forest Directional Predictor.
+-   **Robust Backtesting**: Includes transaction costs (0.1%) and slippage simulation.
+-   **Performance Metrics**: Sharpe Ratio, Maximum Drawdown, Cumulative Returns.
+
+## 📈 Sample Result
+*Running `main.py` generates a comparison of strategies against the Buy & Hold benchmark.*
